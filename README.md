@@ -14,7 +14,7 @@ The included data set is based on 2014 ACS 1-year estimates from the [US Census 
 
 *  This homework utilizes both **html** and **Javascript** that are stored in the folder: **D3_data_journalism**.
 
-### Core Assignment: D3 Dabbler (Required Assignment)
+### Core Assignment: D3 Dabbler (Required)
 
 ![scatter](D3_data_journalism/assets/images/scatter.jpg)
 
@@ -22,13 +22,13 @@ Created a scatter plot between two of the data variables such as `Healthcare vs.
 
 * state abbreviations in the circles.
 
-* cCreated and situated axes and labels to the left and bottom of the chart.
+* created and situated axes and labels to the left and bottom of the chart.
 
 * Note: `python -m http.server` was used to run the visualization and host the page at `localhost:8000` web browser.
 
 - - -
 
-### Bonus: Impress the Boss (Optional Assignment)
+### Bonus: Impress the Boss (Optional)
 
 Created an interactive graphic using selected data.
 

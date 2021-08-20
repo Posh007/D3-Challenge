@@ -168,7 +168,7 @@ function visualize(theData) {
   // =================================
   // curX and curY will determine what data gets represented in each axis.
   // We designate our defaults here, which carry the same names
-  // as the headings in their matching .csv data file.
+  // as the headings in their matching data.csv file.
   var curX = "poverty";
   var curY = "obesity";
 
