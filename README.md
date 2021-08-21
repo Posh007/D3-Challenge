@@ -18,7 +18,7 @@ The included data set is based on 2014 ACS 1-year estimates from the [US Census 
 
 ![scatter](D3_data_journalism/assets/images/scatter.jpg)
 
-Created a scatter plot between two of the data variables such as `Healthcare vs. Poverty` or `Smokers vs. Age`.  This graphic was coded in the `app.js` file, through pulling in the data from `data.csv` by using the `d3.csv` function.  The graphic includes:
+Created a scatter plot between two of the data variables such as `Healthcare vs. Poverty`.  This graphic was coded in the `app.js` file, through pulling in the data from `data.csv` by using the `d3.csv` function.  The graphic includes:
 
 * state abbreviations in the circles.
 
