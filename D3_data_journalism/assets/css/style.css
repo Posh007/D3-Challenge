@@ -40,7 +40,7 @@
 }
 
 #footer a {
-  color: #55c7c1;
+  color: #7a9fcf;
 }
 
 .navbar-brand {
@@ -49,5 +49,27 @@
 }
 
 .header-font {
-  font-family: 'Abril Fatface', cursive !important;
+  font-family: 'Abril Fatface', cursive;
+}
+
+#poverty-healthcare,
+#poverty-smokes,
+#poverty-obesity,
+#age-healthcare,
+#age-smokes,
+#age-obesity,
+#income-healthcare,
+#income-smokes,
+#income-obesity {
+  display: none;
+}
+
+.card-header {
+  background-color: #7a9fcf;
+}
+
+.card-inactive {
+  font-weight: lighter;
+  fill: #7a9fcf;
+  transition: fill 0.3s ease-out;
 }

@@ -2,113 +2,109 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>D3Times</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/d3Style.css">
+    <meta charset="UTF-8">
+    <title>D3Times</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/d3Style.css">
+    <!--link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet"-->
 
 </head>
 
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-md-12 jumbo-bg">
-        <h1>D3Times</h1>
-      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-12 jumbo-bg">
+                <h1>D3Times</h1>
+            </div>
+        </div>
+       
+        <div class="row">
+            <div class="col-xs-12  col-md-12">
+                <div class="article header-font">
+                    <h3>Correlations Discovered Between Health Risks and Age, Poverty, and Income</h3>
+                </div>
+            </div>
     </div>
-    <div class="row">
-      <div class="col-xs-12  col-md-12">
-          <div class="article header-font">
-              <h3>Correlations Discovered Between Health Risks and Age, Poverty, and Income</h3>
-          </div>
-      </div>
-  </div>
-  <div class="row">
-      <div class="col-xs-12  col-md-12">
-        <div id="scatter">
-          <!-- We append our chart here. -->
+     <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <div id="scatter">
+                    <!-- We append our chart here. -->
+                </div>
+            </div>
         </div>
-      </div>
+        <div class="row mx-5 mb-4">
+            <div class="card-deck mx-auto">
+                <div class="card w-75" id="poverty-healthcare">
+                    <div class="card-body p-0">
+                        <h5 class="card-header header-font">Poverty vs. Lack of Healthcare</h5>
+                        <p class="card-text p-2">In general, healthcare seems to be lacking when the levels of poverty are higher. However, there are exceptions: Texas and Alaska have the highest number of adults who lack healthcare despite having lower poverty rates.</p>
+                    </div>
+                </div>
+                <div class="card w-75" id="poverty-smokes">
+                    <div class="card-body p-0">
+                        <h5 class="card-header header-font">Poverty vs. Smoking</h5>
+                        <p class="card-text p-2">When comparing the two factors, the percentage of smokers appear to be consistent across the the states, with a slight rise as poverty rates increase.</p>
+                    </div>
+                </div>
+                <div class="card w-75" id="poverty-obesity">
+                    <div class="card-body p-0">
+                        <h5 class="card-header header-font">Poverty vs. Obesity</h5>
+                        <p class="card-text p-2">Obesity is generally high across all states, even states with low poverty rates have high rates of obesity.  Therefore there seem to be a very weak correlation between these two factors.</p>
+                    </div>
+                </div>
+                <div class="card w-75t" id="age-healthcare">
+                    <div class="card-body p-0">
+                        <h5 class="card-header header-font">Age vs. Lack of Healthcare</h5>
+                        <p class="card-text p-2">Adults between the age of 36-40 appear to have inadequate healthcare coverage. Texas appears to have the highest percentage of the population who lacks healthcare. </p>
+                    </div>
+                </div>
+                <div class="card w-75" id="age-smokes">
+                    <div class="card-body p-0">
+                        <h5 class="card-header header-font">Age vs. Smoking</h5>
+                        <p class="card-text p-2">Analysis shows that nationwide a large proportion of smokers are 36 years and older.  Utah is the only state with a low median age and the lowest smoking rate.</p> 
+                    </div>
+                </div>
+                <div class="card w-75" id="age-obesity">
+                    <div class="card-body p-0">
+                        <h5 class="card-header header-font">Age vs. Obesity</h5>
+                        <p class="card-text p-2">Obesity seems to increase as the population ages.  Thus, obesity is higher in states where the median age is 36-40 years.</p>
+                    </div>
+                </div>
+                <div class="card w-75" id="income-healthcare">
+                    <div class="card-body p-0">
+                        <h5 class="card-header header-font">Household Income vs. Lack of Healthcare</h5>
+                        <p class="card-text p-2">States with a higher median household income appear to have better healthcare coverahe rates than those with lower incomes.</p>
+                    </div>
+                </div>
+                <div class="card w-75" id="income-smokes">
+                    <div class="card-body p-0">
+                        <h5 class="card-header header-font">Household Income vs. Smoking</h5>
+                        <p class="card-text p-2">Smoking seems to be more apparent among states with large communities with lower incomes.  Hence states with relatively high incomes have some of the lowest smoking rates.</p>
+                    </div>
+                </div>
+                <div class="card w-75" id="income-obesity">
+                    <div class="card-body p-0">
+                        <h5 class="card-header header-font">Household Income vs. Obesity</h5>
+                        <p class="card-text p-2">Obesity is generally high across  all states due to a variety of reasons.  However, when compared to income, obesity levels seem to lessen with increase in household income.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <br>
-    <div class="row">
-        <div class="col-xs-6  col-md-4">
-          <div class="article">
-            <h4>Poverty vs. Lack of Healthcare</h4>
-            <p> In general healthcare seems to be lacking when poverty levels are higher.  However, there are exceptions:  Texas and Alaska have the highest number of adults who lack healthcare despite having lower poverty rates.
-            </p>
-          </div>
-        </div>
-        <div class="col-xs-6  col-md-4">
-          <div class="article">
-            <h4>Poverty vs. Smoking</h4>
-            <p>When comparing the two factors, the percentage of smokers appear to be consistent across the the states, with a slight rise as poverty rates increase.
-            </p>
-          </div>
-        </div>
-        <div class="col-xs-6  col-md-4">
-          <div class="article">
-            <h4>Poverty vs. Obesity</h4>
-            <p>Obesity is generally high across all states, even states with low povert rates have high rates of obesity.  Therefore there is a very weak correlation between the two factors. 
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-6  col-md-4">
-          <div class="article">
-            <h4>Age vs. Lack of Healthcare</h4>
-            <p>Adults between the age of 36-40 appear to have inadequate healthcare coverage. Texas has the highest percentage of the population who lacks healthcare.</p>
-          </div>
-        </div>
-        <div class="col-xs-6  col-md-4">
-          <div class="article">
-            <h4>Age vs. Smoking</h4>
-            <p>It appeara that nationwide a large proportion of smokers are 36 years and older.  Utah is the only state with a low median age and the lowest smoking rate.</p>            </p>
-          </div>
-        </div>
-        <div class="col-xs-6  col-md-4">
-          <div class="article">
-            <h4>Age vs. Obesity</h4>
-            <p>Obesity appears to increse as the population ages.  Thus, obesity is on the high in states where the median age is 36-40 years.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-6  col-md-4">
-          <div class="article">
-            <h4>Income vs. Lack of Healthcare</h4>
-            <p>Low income households are less likely to make adequate investments towards healthcare coverage.</p>
-          </div>
-        </div>
-        <div class="col-xs-6  col-md-4">
-          <div class="article">
-            <h4>Income vs. Smoking</h4>
-            <p>Smoking seems to be more apparent among communities with lower incomes.  Hence states with relatively high incomes have some of the lowest smoking rates. 
-            </p>
-          </div>
-        </div>
-        <div class="col-xs-6  col-md-4">
-          <div class="article">
-            <h4>Income vs. Obesity</h4>
-            <p>Obesity is mostly high across all states.  However, when compared to income, obesity levels seem to lessen with increase in household income.  Similarly obesity levels are higher in states with lower income levels.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>  
-  <!-- Footer-->
-  <div id="footer">
-    <p>A. Portia&copy;2021</p>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  <script src="https://d3js.org/d3.v5.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
-  <script type="text/javascript" src="assets/js/app.js"></script>
+    <!-- Footer-->
+    <div id="footer" class="bg-secondary">
+        <p>The Coding Boot Camp&copy;2021</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+
+
+    <script type="text/javascript" src="assets/js/app.js"></script>
 
 </body>
 
