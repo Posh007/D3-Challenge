@@ -1,6 +1,7 @@
 .aText {
-    font-family: sans-serif;
-    font-size: 16px;
+    font-family: 'Abril Fatface', cursive;
+    font-weight: bold;
+    font-size: 18px;
     text-anchor: middle;
   }
   
@@ -25,13 +26,13 @@
   
   /* font size dependent on radius, see app.js */
   .stateText {
-    font-family: sans-serif;
+    font-family: 'Abril Fatface', cursive;
     fill: #fff;
     text-anchor: middle;
   }
   
   .stateCircle {
-    fill: #89bdd3;
+    fill: #9ab8a9;
     stroke: #e3e3e3;
   }
   
@@ -59,7 +60,7 @@
     }
   
     .aText {
-      font-size: 14px;
+      font-size: 12px;
     }
   }
   

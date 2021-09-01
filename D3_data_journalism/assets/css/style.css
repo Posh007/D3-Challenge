@@ -33,3 +33,21 @@
     margin: 0;
     font-size: 16px;
   }
+ 
+#footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+#footer a {
+  color: #55c7c1;
+}
+
+.navbar-brand {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 35px !important;
+}
+
+.header-font {
+  font-family: 'Abril Fatface', cursive !important;
+}

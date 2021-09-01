@@ -1,11 +1,8 @@
 // D3 Animated Scatter Plot
 
-// Section 1: Pre-Data Setup
+// Setup
 // ===========================
-// Before we code any data visualizations,
-// we need to at least set up the width, height and margins of the graph.
-// Note: I also added room for label text as well as text padding,
-// though not all graphs will need those specifications.
+// Setting up the width, height and margins of the graph and padding
 
 // Grab the width of the containing box
 var width = parseInt(d3.select("#scatter").style("width"));
@@ -16,14 +13,14 @@ var height = width - width / 3.9;
 // Margin spacing for graph
 var margin = 20;
 
-// space for placing words
+// label area
 var labelArea = 110;
 
-// padding for the text at the bottom and left axes
+// padding for the text 
 var tPadBot = 40;
 var tPadLeft = 40;
 
-// Create the actual canvas for the graph
+// Create svg container
 var svg = d3
   .select("#scatter")
   .append("svg")
@@ -486,13 +483,11 @@ function visualize(theData) {
 
   // Part 5: Mobile Responsive
   // =========================
-  // With d3, we can call a resize function whenever the window dimensions change.
-  // This make's it possible to add true mobile-responsiveness to our charts.
+  // Use a resize function to add true mobile-responsiveness to charts
   d3.select(window).on("resize", resize);
 
-  // One caveat: we need to specify what specific parts of the chart need size and position changes.
   function resize() {
-    // Redefine the width, height and leftTextY (the three variables dependent on the width of the window).
+    // Redefine the width, height and leftTextY 
     width = parseInt(d3.select("#scatter").style("width"));
     height = width - width / 3.9;
     leftTextY = (height + labelArea) / 2 - labelArea;
@@ -504,7 +499,7 @@ function visualize(theData) {
     xScale.range([margin + labelArea, width - margin]);
     yScale.range([height - margin - labelArea, margin]);
 
-    // With the scales changes, update the axes (and the height of the x-axis)
+    //With the scales changes, update the axes (and the height of the x-axis)
     svg
       .select(".xAxis")
       .call(xAxis)
@@ -512,17 +507,17 @@ function visualize(theData) {
 
     svg.select(".yAxis").call(yAxis);
 
-    // Update the ticks on each axis.
+    //Update the ticks on each axis.
     tickCount();
 
-    // Update the labels.
+    //Update the labels.
     xTextRefresh();
     yTextRefresh();
 
-    // Update the radius of each dot.
+    //Update the radius of each dot.
     crGet();
 
-    // With the axis changed, let's update the location and radius of the state circles.
+    //update the location and radius of the state circles.
     d3
       .selectAll("circle")
       .attr("cy", function(d) {
@@ -535,7 +530,7 @@ function visualize(theData) {
         return circRadius;
       });
 
-    // We need change the location and size of the state texts, too.
+    //change the location and size of the state texts
     d3
       .selectAll(".stateText")
       .attr("dy", function(d) {
